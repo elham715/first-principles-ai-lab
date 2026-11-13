@@ -1,33 +1,22 @@
-# Milestone 04: Parameter-Efficient Fine-Tuning (LoRA & Adapters)
+# 04. Parameter-Efficient Fine-Tuning (LoRA & Adapters)
 
-> **Context Anchor**: This folder houses the from-scratch implementations reproducing the mathematical foundations of this milestone.
+Low-rank weight updates and zero-initialized adapter grafting without modifying frozen base weights.
 
-## 📄 Primary Papers for this Milestone
+## Papers
 
-- [`23_2021_hu_lora_low_rank_adaptation.pdf`](file:///Users/admin/Documents/Elhams%20Universe/Artificial%20Intelligence/llm%20Intelligence/papers/05_Fine_Tuning/23_2021_hu_lora_low_rank_adaptation.pdf)
-- [`24_2023_zhang_llama_adapter_zero_init_attention_grafting.pdf`](file:///Users/admin/Documents/Elhams%20Universe/Artificial%20Intelligence/llm%20Intelligence/papers/05_Fine_Tuning/24_2023_zhang_llama_adapter_zero_init_attention_grafting.pdf)
-- [`28_2024_li_mixlora_mixture_of_lora_experts.pdf`](file:///Users/admin/Documents/Elhams%20Universe/Artificial%20Intelligence/llm%20Intelligence/papers/05_Fine_Tuning/28_2024_li_mixlora_mixture_of_lora_experts.pdf)
+1. Hu et al. (2021) — *LoRA: Low-Rank Adaptation of Large Language Models*
+2. Zhang et al. (2023) — *LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention*
+3. Li et al. (2024) — *MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts*
 
----
+## Core Equation
 
-### Mathematical Formulation
-1. **LoRA Decomposition**:
-   $$W = W_0 + \Delta W = W_0 + \frac{\alpha}{r} B A, \quad B \in \mathbb{R}^{d_{out} \times r}, A \in \mathbb{R}^{r \times d_{in}}$$
-   $$\text{Initialization: } A \sim \mathcal{N}(0, \sigma^2), B = 0 \implies \Delta W = 0 \text{ at step 0}$$
+$$W = W_0 + \Delta W = W_0 + \frac{\alpha}{r} B A, \quad B \in \mathbb{R}^{d_{\text{out}} \times r},\; A \in \mathbb{R}^{r \times d_{\text{in}}}$$
 
----
+Initializing $A \sim \mathcal{N}(0, \sigma^2)$ and $B = 0$ keeps $\Delta W = 0$ at step 0.
 
-## 🛠️ Code Artifacts to Build
+## Planned Files
 
-| Script Filename | Implementation Focus | Status |
-|---|---|:---:|
-| `lora_linear.py` | Custom PyTorch Linear module with frozen base weights W_0 and rank-r trainable decomposition B*A | ⚪ Pending |
-| `zero_init_adapter.py` | Zero-initialized attention gating for disturbance-free step-0 grafting | ⚪ Pending |
-
----
-
-## 🚀 Current Active Target
-
-**First Paper to Reproduce**: `Paper 23: Edward J. Hu et al. (2021) — "LoRA: Low-Rank Adaptation of Large Language Models"`
-
-- **Next Action**: Create `lora_linear.py` and verify with analytical gradients.
+| File | Description | Status |
+|---|---|---|
+| `lora_linear.py` | Linear wrapper with frozen $W_0$ and trainable rank-$r$ factors $B, A$ | Planned |
+| `zero_init_adapter.py` | Zero-initialized gated attention adapter | Planned |

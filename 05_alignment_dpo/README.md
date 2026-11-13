@@ -1,31 +1,19 @@
-# Milestone 05: Preference Optimization & Alignment (DPO)
+# 05. Preference Optimization & Alignment
 
-> **Context Anchor**: This folder houses the from-scratch implementations reproducing the mathematical foundations of this milestone.
+Direct preference optimization and supervised alignment fundamentals.
 
-## 📄 Primary Papers for this Milestone
+## Papers
 
-- [`35_2023_zhou_lima_less_is_more_for_alignment.pdf`](file:///Users/admin/Documents/Elhams%20Universe/Artificial%20Intelligence/llm%20Intelligence/papers/07_Alignment_and_Reasoning/35_2023_zhou_lima_less_is_more_for_alignment.pdf)
-- [`36_2023_rafailov_dpo_direct_preference_optimization.pdf`](file:///Users/admin/Documents/Elhams%20Universe/Artificial%20Intelligence/llm%20Intelligence/papers/07_Alignment_and_Reasoning/36_2023_rafailov_dpo_direct_preference_optimization.pdf)
+1. Zhou et al. (2023) — *LIMA: Less Is More for Alignment*
+2. Rafailov et al. (2023) — *Direct Preference Optimization: Your Language Model is Secretly a Reward Model*
 
----
+## Core Equation
 
-### Mathematical Formulation
-1. **DPO Closed-Form Loss**:
-   $$\mathcal{L}_{\text{DPO}}(\pi_\theta; \pi_{\text{ref}}) = -\mathbb{E}_{(x, y_w, y_l)} \left[ \log \sigma \left( \beta \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)} \right) \right]$$
+$$\mathcal{L}_{\text{DPO}}(\pi_\theta; \pi_{\text{ref}}) = -\mathbb{E}_{(x, y_w, y_l)} \left[ \log \sigma \left( \beta \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)} \right) \right]$$
 
----
+## Planned Files
 
-## 🛠️ Code Artifacts to Build
-
-| Script Filename | Implementation Focus | Status |
-|---|---|:---:|
-| `dpo_loss.py` | Closed-form Direct Preference Optimization loss function using reference policy logits | ⚪ Pending |
-| `toy_dpo_training.py` | Training loop optimizing preferred vs dispreferred responses on pairwise text | ⚪ Pending |
-
----
-
-## 🚀 Current Active Target
-
-**First Paper to Reproduce**: `Paper 36: Rafael Rafailov et al. (2023) — "Direct Preference Optimization"`
-
-- **Next Action**: Create `dpo_loss.py` and verify with analytical gradients.
+| File | Description | Status |
+|---|---|---|
+| `dpo_loss.py` | Closed-form DPO loss comparing policy and reference log-probabilities | Planned |
+| `toy_dpo_training.py` | Pairwise preference optimization loop on synthetic data | Planned |
