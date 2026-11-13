@@ -27,5 +27,7 @@ If you need a refresher on NumPy or PyTorch basics first, see [`../00_coding_fou
 | [`01_elman_rnn_walkthrough.ipynb`](./01_elman_rnn_walkthrough.ipynb) | Notebook walkthrough of Elman RNN equations, BPTT, and vanishing gradient plot | Done |
 | [`02_lstm_cell_from_scratch.py`](./02_lstm_cell_from_scratch.py) | PyTorch LSTM cell from raw tensor ops, CEC gradient highway test, and 1997 Adding Problem | Done |
 | [`02_lstm_walkthrough.ipynb`](./02_lstm_walkthrough.ipynb) | Notebook walkthrough with gradient-flow plots, Adding Problem training curves, and gate inspection | Done |
-| `03_seq2seq_encoder_decoder.py` | Multi-layer LSTM encoder-decoder with teacher forcing | Planned |
-| `04_bahdanau_attention.py` | Additive attention decoder with alignment weights | Planned |
+| [`03_seq2seq_encoder_decoder.py`](./03_seq2seq_encoder_decoder.py) | 2-layer LSTM encoder-decoder with teacher forcing, source-reversal comparison, and bottleneck decay | Done |
+| [`03_seq2seq_walkthrough.ipynb`](./03_seq2seq_walkthrough.ipynb) | Interactive Seq2Seq walkthrough plotting normal vs. reversed training and accuracy across lengths | Done |
+| [`04_bahdanau_attention.py`](./04_bahdanau_attention.py) | Raw-tensor BiGRU encoder + additive attention decoder solving the fixed-bottleneck drop at $T=20+$ | Done |
+| [`04_bahdanau_attention_walkthrough.ipynb`](./04_bahdanau_attention_walkthrough.ipynb) | Interactive Bahdanau walkthrough with bottleneck benchmark curves and alignment heatmaps | Done |
