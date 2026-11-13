@@ -28,7 +28,7 @@ first-principles-ai-lab/
 | Directory | Focus | Papers Covered | Status |
 |---|---|---|---|
 | [`00_coding_foundations/`](./00_coding_foundations/) | Prerequisites | Python OOP, NumPy, Pandas, PyTorch, TensorFlow | Done |
-| [`01_sequence_foundations/`](./01_sequence_foundations/) | Recurrence & Attention | Elman (1990), Hochreiter & Schmidhuber (1997), Sutskever et al. (2014), Bahdanau et al. (2014) | In progress (Elman done) |
+| [`01_sequence_foundations/`](./01_sequence_foundations/) | Recurrence & Attention | Elman (1990), Hochreiter & Schmidhuber (1997), Sutskever et al. (2014), Bahdanau et al. (2014) | In progress (Elman, LSTM done) |
 | [`02_transformer_core/`](./02_transformer_core/) | Transformer Decoder | Vaswani et al. (2017), Radford et al. (2019), Zhang & Sennrich (2019), Shazeer (2020), Su et al. (2021), Ainslie et al. (2023) | Planned |
 | [`03_residual_stream/`](./03_residual_stream/) | Deep Optimization | He et al. (2015, 2016), Veit et al. (2016), Xiong et al. (2020), Wang et al. (2022) | Planned |
 | [`04_peft_lora/`](./04_peft_lora/) | Parameter-Efficient Tuning | Hu et al. (2021), Zhang et al. (2023), Pfeiffer et al. (2021), Li et al. (2024) | Planned |

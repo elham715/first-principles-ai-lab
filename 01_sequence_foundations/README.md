@@ -25,6 +25,6 @@ If you need a refresher on NumPy or PyTorch basics first, see [`../00_coding_fou
 |---|---|---|
 | [`01_elman_rnn_numpy.py`](./01_elman_rnn_numpy.py) | NumPy Elman RNN with analytical BPTT, numerical gradcheck (`rel_err < 1e-10`), and gradient decay test | Done |
 | [`01_elman_rnn_walkthrough.ipynb`](./01_elman_rnn_walkthrough.ipynb) | Notebook walkthrough of Elman RNN equations, BPTT, and vanishing gradient plot | Done |
-| `02_lstm_cell_from_scratch.py` | LSTM cell in PyTorch from raw tensor ops | Planned |
+| [`02_lstm_cell_from_scratch.py`](./02_lstm_cell_from_scratch.py) | PyTorch LSTM cell from raw tensor ops, CEC gradient highway test, and 1997 Adding Problem | Done |
 | `03_seq2seq_encoder_decoder.py` | Multi-layer LSTM encoder-decoder with teacher forcing | Planned |
 | `04_bahdanau_attention.py` | Additive attention decoder with alignment weights | Planned |
