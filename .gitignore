@@ -1,0 +1,22 @@
+# OS & Editor Artifacts
+.DS_Store
+.vscode/
+.idea/
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Model Checkpoints & Large Outputs
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
